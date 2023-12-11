@@ -32,3 +32,10 @@ Just change the **kitty.conf** file.
 `font_family      FiraCode Nerd Font Mono Med`
 
 `bold_font        FiraCode Nerd Font Mono Bold`
+
+### key shortcuts
+
+This shortcut is to override the default behavior of kitty `ctrl+shift+enter` that launch bash instead of fish
+
+`map ctrl+shift+enter launch sh -c "exec fish"`
+
