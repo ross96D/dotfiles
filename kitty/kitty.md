@@ -5,6 +5,8 @@ and jsut put symlink to the /usr/bin/ folder to get a system wide installation
 
 `ln -s ~/.local/kitty.app/bin/kitty /usr/bin/` 
 
+install `kitty-terminfo` package to make the kitty terminfo files available system-wide. If not the terminal may present issues with some commands run as sudo. See https://sw.kovidgoyal.net/kitty/faq/#i-get-errors-about-the-terminal-being-unknown-or-opening-the-terminal-failing-or-functional-keys-like-arrow-keys-don-t-work
+
 
 ### keyboard custom key to launch the terminal
 add this to a custom keyboard to launch the terminal with fish
