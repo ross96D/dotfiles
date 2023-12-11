@@ -33,6 +33,13 @@ Just change the **kitty.conf** file.
 
 `bold_font        FiraCode Nerd Font Mono Bold`
 
+`font_size 12.0`
+
+### kitty icon
+download the kitty icon in https://github.com/igrmk/whiskers/raw/main/whiskers_256x256.png and copy the icon to the kitty config path
+
+`cp whiskers_256x256.png ~/.config/kitty/kitty.app.png`
+
 ### key shortcuts
 
 This shortcut is to override the default behavior of kitty `ctrl+shift+enter` that launch bash instead of fish
