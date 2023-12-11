@@ -36,9 +36,19 @@ Just change the **kitty.conf** file.
 `font_size 12.0`
 
 ### kitty icon
-download the kitty icon in https://github.com/igrmk/whiskers/raw/main/whiskers_256x256.png and copy the icon to the kitty config path
+download the kitty icons
 
-`cp whiskers_256x256.png ~/.config/kitty/kitty.app.png`
+https://github.com/igrmk/whiskers/raw/main/whiskers_128x128.png 
+
+https://github.com/igrmk/whiskers/raw/main/whiskers_32x32.png 
+
+copy the icons to `~/.local/kitty.app/lib/kitty/logo/` (this directory could vary if u installed with a package manager. Search in `/usr/lib/kitty/logo`)
+
+backup the current icon `mv kitty.png kitty.png.old`
+
+`mv whiskers_32x32.png kitty.png`
+
+`mv whiskers_128x128.png kitty-128.png`
 
 ### key shortcuts
 
