@@ -31,7 +31,7 @@ on the **kitty.conf** file set this `include ./theme.conf`
 ### fonts
 Just change the **kitty.conf** file.
 
-`font_family      FiraCode Nerd Font Mono Med`
+`font_family      FiraCode Nerd Font Mono Reg`
 
 `bold_font        FiraCode Nerd Font Mono Bold`
 
