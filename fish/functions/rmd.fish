@@ -1,1 +1,3 @@
-/home/abelardo/.config/fish/functions/rmd.fish
+function rmd -d "remove the the DIRECTORY(ies), if they are empty."
+    rmdir $argv
+end

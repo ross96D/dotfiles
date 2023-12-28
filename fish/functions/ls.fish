@@ -1,1 +1,4 @@
-/home/abelardo/.config/fish/functions/ls.fish
+
+function ls -d "use the exa commmand instead of the ls"
+    exa $argv
+end
