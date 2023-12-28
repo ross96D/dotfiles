@@ -1,0 +1,1 @@
+/home/abelardo/.config/fish/functions/notify.fish
