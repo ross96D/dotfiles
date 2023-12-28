@@ -1,8 +1,10 @@
 version: 3
 tasks:
   fish:
+    desc: Update the symlink of fish config folder.
     cmd: cp -srn ~/.config/fish/ .
   kitty:
+    desc: Update the symlink of kitty config folder.
     cmd: cp -srn ~/.config/kitty/ .
   sync:
     cmds:
