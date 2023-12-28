@@ -1,0 +1,1 @@
+/home/abelardo/.config/kitty/kitty-themes/.github/PULL_REQUEST_TEMPLATE.md

@@ -1,0 +1,1 @@
+/home/abelardo/.config/kitty/kitty-themes/.tools/generate_theme_preview.sh

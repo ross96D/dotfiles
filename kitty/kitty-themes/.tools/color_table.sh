@@ -1,0 +1,1 @@
+/home/abelardo/.config/kitty/kitty-themes/.tools/color_table.sh

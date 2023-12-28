@@ -1,0 +1,1 @@
+/home/abelardo/.config/kitty/kitty-themes/.github/ISSUE_TEMPLATE/theme-request.md
