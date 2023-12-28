@@ -1,0 +1,10 @@
+version: 3
+tasks:
+  fish:
+    cmd: cp -srn ~/.config/fish/ .
+  kitty:
+    cmd: cp -srn ~/.config/kitty/ .
+  sync:
+    cmds:
+      - task: fish
+      - task: kitty
