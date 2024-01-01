@@ -1,5 +1,10 @@
 
 function __task_autocompletions
+    # only apply if task command exists
+    if not type -q task
+        return
+    end
+
     # delete contents to avoid corrupt completions for files without a task file
     set -eg __task_autocompletions_commands
 
