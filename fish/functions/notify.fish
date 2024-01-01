@@ -1,4 +1,4 @@
-function notify
+function notify -d "notify when the last job complete"
     set -l job (jobs -l -g)
     or begin
         echo "There are no jobs" >&2

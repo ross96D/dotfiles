@@ -1,3 +1,3 @@
-function ll
-    exa -lg --icons $argv
+function ll -d "long output on ls"
+    ls -lg --icons $argv
 end

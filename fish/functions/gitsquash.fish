@@ -1,4 +1,4 @@
-function gitsquash
+function gitsquash -d "hack to rewrite history in a form of a git merge --squash but without merge"
     # TODO make validation
     set s (git log --format=%B --reverse HEAD~$argv[1]..HEAD)
     $s | string join ...

@@ -1,4 +1,4 @@
-function h
+function h -d "beautify the help output"
     begin
         __help_command_raw $argv &| read -lz $err &>/dev/null
     end | read -lz $out &>/dev/null
