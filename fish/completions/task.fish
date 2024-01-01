@@ -42,6 +42,6 @@ none - No sorting (As they appear in the Taskfile)"
     complete -c task -s w -l watch -d "Enables watch of the given task."
 end
 
-if tyep -q task
+if type -q task
     __task_flag_completions
 end
