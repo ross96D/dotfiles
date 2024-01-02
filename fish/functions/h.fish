@@ -1,12 +1,13 @@
 function h -d "beautify the help output"
     begin
-        __help_command_raw $argv &| read -lz $err &>/dev/null
-    end | read -lz $out &>/dev/null
+        __help_command_raw $argv &| read -fz err &>/dev/null
+    end | read -lz out &>/dev/null
 
     if test -z "$err" -a -z "$out"
         __help_command $argv
         return
     end
+
 
     if test -z "$err"
         __help_command $argv
