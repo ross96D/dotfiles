@@ -10,3 +10,9 @@ function last_history_item
     echo $history[1]
 end
 abbr -a !! --position anywhere --function last_history_item
+
+abbr -a gs --position command "git status"
+abbr -a gp --position command "git push"
+abbr -a ga --position command "git add"
+abbr -a gac --position command --set-cursor "git add . && git commit -m \"%\""
+abbr -a gaca --position command "git add . && git commit --amend"
