@@ -28,4 +28,8 @@ Follow the instructions here https://github.com/ryanoasis/nerd-fonts#option-3-in
 `sudo pacman -S starship`
 
 ## 7 Set the configuration
-Git clone the https://github.com/ross96D/dotfiles and use the setup script. **(TODO)**
+Git clone the https://github.com/ross96D/dotfiles and use the setup script.
+```
+python3 setup.py
+```
+Type `python3 setup.py -h` to see the help

@@ -39,7 +39,7 @@ def parse_arguments():
     )
 
     parser = argparse.ArgumentParser(
-        prog="config_setup",
+        prog="python3 setup.py",
         description="Set up the config files listed here",
     )
 
@@ -55,7 +55,7 @@ def parse_arguments():
         "--output",
         dest="output",
         default=user_config_path,
-        help="set the output",
+        help="set a config destination folder different from %%HOME%%/.config",
     )
 
     args = parser.parse_args()
@@ -101,5 +101,4 @@ def main(args: Args):
 
 
 if __name__ == "__main__":
-    print("as")
     main(parse_arguments())
