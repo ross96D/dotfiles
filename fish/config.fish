@@ -8,6 +8,9 @@ begin
 end
 source /usr/share/autojump/autojump.fish
 
+# set video player variable
+set -g __VIDEO_PLAYER vlc
+
 
 alias c='code --no-proxy-server=true .'
 alias fixcolor='nvidia-settings --load-config-only'
