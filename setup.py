@@ -4,14 +4,16 @@ import shutil
 import sys
 
 
+def rm(dest, dryrun=False):
+    print("deleting files: %s" % (dest))
+    if not dryrun:
+        shutil.rmtree(dest)
+
+
 def cp(src, dest, dryrun=False):
     print("copying file: %s -> %s" % (src, dest))
     if not dryrun:
         shutil.copy(src, dest)
-
-
-def get_shell():
-    return os.path.basename(os.getenv("SHELL", ""))
 
 
 def mkdir(path, dryrun=False):
@@ -88,9 +90,14 @@ def copy_config(args: Args, config_name: str):
             if line == "no" or line == "n":
                 copy = False
                 break
+            print("Please type `y` for yes or `n` for no")
+            print("Do you want to delete Y/n")
 
     if copy:
+        rm(cpath, args.dry_run)
         cp(os.path.join(cwd, config_name), cpath, args.dry_run)
+    else:
+        print(f"setup of {config_name} could not be completed sucessfully")
 
 
 def main(args: Args):
