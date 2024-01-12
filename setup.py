@@ -13,7 +13,7 @@ def rm(dest, dryrun=False):
 def cp(src, dest, dryrun=False):
     print("copying file: %s -> %s" % (src, dest))
     if not dryrun:
-        shutil.copy(src, dest)
+        shutil.copytree(src, dest)
 
 
 def mkdir(path, dryrun=False):
@@ -72,14 +72,14 @@ def parse_arguments():
 
 def copy_config(args: Args, config_name: str):
     cwd = os.getcwd()
-    cpath = os.path.join(args.config_path, config_name)
+    confpath = os.path.join(args.config_path, config_name)
 
     copy = True
-    if not os.path.exists(cpath):
-        mkdir(cpath, args.dry_run)
+    if not os.path.exists(confpath):
+        mkdir(confpath, args.dry_run)
     else:
         # prompt for confirmation
-        print("The config destination folder already exists", cpath)
+        print("The config destination folder already exists", confpath)
         print("Do you want to delete Y/n")
         for line in sys.stdin:
             line = line.rstrip()
@@ -94,8 +94,8 @@ def copy_config(args: Args, config_name: str):
             print("Do you want to delete Y/n")
 
     if copy:
-        rm(cpath, args.dry_run)
-        cp(os.path.join(cwd, config_name), cpath, args.dry_run)
+        rm(confpath, args.dry_run)
+        cp(os.path.join(cwd, config_name), confpath, args.dry_run)
     else:
         print(f"setup of {config_name} could not be completed sucessfully")
 
