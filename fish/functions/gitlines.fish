@@ -16,6 +16,6 @@ function __construct_filters
     if test -z "$command"
         set -a command "git ls-files -z "
     end
-    set command "$command | xargs -0n1 git blame -w --line-porcelain | perl -n -e '/^author (.+)\$/ && print \"\$1\n\"' | sort -f | uniq -c | sort -nr"
+    set command "$command | mxargs git blame -w --line-porcelain | perl -n -e '/^author (.+)\$/ && print \"\$1\n\"' | sort -f | uniq -c | sort -nr"
     echo "$command"
 end
