@@ -1,3 +1,3 @@
 function nano
-    micro
+    micro $argv
 end
