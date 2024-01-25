@@ -104,8 +104,8 @@ def copy_config(args: Args, config_name: str, is_file=False):
             print("Do you want to delete it Y/n")
 
     if copy:
-        rm(confpath, args.dry_run)
-        cp(os.path.join(cwd, config_name), confpath, args.dry_run)
+        rm(confpath, args.dry_run, is_file)
+        cp(os.path.join(cwd, config_name), confpath, args.dry_run, is_file)
     else:
         print(f"setup of {config_name} could not be completed sucessfully")
 
