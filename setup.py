@@ -10,7 +10,10 @@ def rm(dest, dryrun=False, is_file=False):
     print("deleting files: %s" % (dest))
     if not dryrun:
         if is_file:
-            os.remove(dest)
+            try:
+                os.remove(dest)
+            except:  # noqa: E722 hack to avoid exceptions when file does not exist
+                return
         else:
             shutil.rmtree(dest)
 
