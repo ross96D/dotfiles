@@ -72,8 +72,9 @@ def parse_arguments():
     return r
 
 
-def copy_config(args: Args, config_name: str):
+def copy_config(args: Args, config_name: str, is_file=False):
     cwd = os.getcwd()
+
     confpath = os.path.join(args.config_path, config_name)
 
     copy = True
@@ -81,8 +82,11 @@ def copy_config(args: Args, config_name: str):
         mkdir(confpath, args.dry_run)
     else:
         # prompt for confirmation
-        print("The config destination folder already exists", confpath)
-        print("Do you want to delete Y/n")
+        print(
+            f"The config destination {"file" if is_file else "folder"} already exists {confpath}",
+            confpath,
+        )
+        print("Do you want to delete it Y/n")
         for line in sys.stdin:
             line = line.rstrip()
             line = line.lower()
@@ -93,7 +97,7 @@ def copy_config(args: Args, config_name: str):
                 copy = False
                 break
             print("Please type `y` for yes or `n` for no")
-            print("Do you want to delete Y/n")
+            print("Do you want to delete it Y/n")
 
     if copy:
         rm(confpath, args.dry_run)
@@ -107,6 +111,7 @@ def main(args: Args):
 
     copy_config(args, "fish")
     copy_config(args, "kitty")
+    copy_config(args, "starship.toml", is_file=True)
 
 
 if __name__ == "__main__":

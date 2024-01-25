@@ -5,13 +5,21 @@ tasks:
     cmds: 
       - find -links +1 -type f -path "./fish/*" -delete
       - cp -lrn ~/.config/fish/ .
+
   kitty:
     desc: Update the symlink of kitty config folder.
     cmds: 
       - find -links +1 -type f -path "./kitty/*" -delete
       - cp -lrn ~/.config/kitty/ .
+
+  starship:
+    desc: Update the symlink of starship configuration.
+    cmds:
+      - rm -f starship.toml
+      - cp -l ~/.config/starship.toml .
   sync:
     desc: synchoronize the config files tracked here
     cmds:
       - task: fish
       - task: kitty
+      - task: starship
