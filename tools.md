@@ -17,3 +17,9 @@
 | `tldr`        | *nice cheatsheets of commands*|
 | `navi`        | *explore cheatsheets easily*|
 | `figlet`      | *utility for making art text*|
+
+## vscode
+|**name**       |**description**                |
+| -------       | ------------------------------|
+|`shellcheck`   |*linter for shell scripts*     |
+|`ruff`         |*linter/formmater for python*  |
