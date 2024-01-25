@@ -84,9 +84,7 @@ def copy_config(args: Args, config_name: str, is_file=False):
     confpath = os.path.join(args.config_path, config_name)
 
     copy = True
-    if not os.path.exists(confpath):
-        mkdir(confpath, args.dry_run)
-    else:
+    if os.path.exists(confpath):
         # prompt for confirmation
         d = "file" if is_file else "folder"
         print(f"The config destination {d} already exists {confpath}", confpath)
@@ -102,6 +100,8 @@ def copy_config(args: Args, config_name: str, is_file=False):
                 break
             print("Please type `y` for yes or `n` for no")
             print("Do you want to delete it Y/n")
+    elif not is_file:
+        mkdir(confpath, args.dry_run)
 
     if copy:
         rm(confpath, args.dry_run, is_file)
