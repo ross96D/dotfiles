@@ -6,16 +6,22 @@ import shutil
 import sys
 
 
-def rm(dest, dryrun=False):
+def rm(dest, dryrun=False, is_file=False):
     print("deleting files: %s" % (dest))
     if not dryrun:
-        shutil.rmtree(dest)
+        if is_file:
+            os.remove(dest)
+        else:
+            shutil.rmtree(dest)
 
 
-def cp(src, dest, dryrun=False):
+def cp(src, dest, dryrun=False, is_file=False):
     print("copying file: %s -> %s" % (src, dest))
     if not dryrun:
-        shutil.copytree(src, dest)
+        if is_file:
+            shutil.copyfile(src, dest)
+        else:
+            shutil.copytree(src, dest)
 
 
 def mkdir(path, dryrun=False):
