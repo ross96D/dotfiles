@@ -33,7 +33,7 @@ exit 0
 
 # Create temporary directory
 mkdir .temp_dir
-tar -xf $file_path -C temp_dir
+tar -C .temp_dir -xf $file_path
 
 if not test $status -eq 0
     echo "could not untar $file_path"
@@ -41,7 +41,7 @@ if not test $status -eq 0
 end
 
 # Get the directory where Go will be installed
-set install_dir "~/.local/"
+set install_dir "$HOME/.local/"
 if not set -q _flag_system
     set install_dir /usr/local/
 end
