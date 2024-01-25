@@ -82,10 +82,8 @@ def copy_config(args: Args, config_name: str, is_file=False):
         mkdir(confpath, args.dry_run)
     else:
         # prompt for confirmation
-        print(
-            f"The config destination {"file" if is_file else "folder"} already exists {confpath}",
-            confpath,
-        )
+        d = "file" if is_file else "folder"
+        print(f"The config destination {d} already exists {confpath}", confpath)
         print("Do you want to delete it Y/n")
         for line in sys.stdin:
             line = line.rstrip()
