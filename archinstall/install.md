@@ -1,4 +1,5 @@
 
+# Installation
 ## 1 Select mirrors
 `nano /etc/pacman.d/mirrorlist` comment all and put 
 ```
@@ -20,16 +21,27 @@ Clone the git repository https://github.com/wting/autojump and ./install.py (May
 
 
 ## 5 Install nerdfonts
-Follow the instructions here https://github.com/ryanoasis/nerd-fonts#option-3-install-script
+Go to https://github.com/ryanoasis/nerd-font, on the releases page download the desired font.
+To install just decompress the content on the .local/share/fonts folder and run `fc-cache -f`
+Suggestions `ComicShannsMono Nerd Font Mono`
 
-**TLDR** Clone the repo https://github.com/ryanoasis/nerd-fonts and `./install.sh <font>`
+## 6 Install emojis
+`sudo pacman -S noto-fonts-emoji`
 
-## 6 Install starship
+## 7 Install starship
 `sudo pacman -S starship`
 
-## 7 Set the configuration
+## 8 Set the configuration
 Git clone the https://github.com/ross96D/dotfiles and use the setup script.
 ```
 python3 setup.py
 ```
 Type `python3 setup.py -h` to see the help
+
+# Postinstallation
+## Compositor
+*If the window manager does not have a compositor follow this.*
+
+Install `picom`. See the man page on the section blur to see how to make it.
+
+*After an stable configuration, set the picom -b to run on start*
