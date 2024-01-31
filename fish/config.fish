@@ -12,7 +12,6 @@ end
 # set video player variable
 set -g __VIDEO_PLAYER vlc
 
-
 alias c='code --no-proxy-server=true .'
 alias fixcolor='nvidia-settings --load-config-only'
 alias obsidian='/home/abelardo/apps/Obsidian-1.4.16.AppImage'
