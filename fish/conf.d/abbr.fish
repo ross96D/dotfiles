@@ -12,7 +12,7 @@ end
 abbr -a !! --position anywhere --function last_history_item
 
 # git
-abbr -a g --position command "git "
+abbr -a g --position command git
 abbr -a gs --position command "git status"
 abbr -a gp --position command "git push"
 abbr -a ga --position command "git add"
