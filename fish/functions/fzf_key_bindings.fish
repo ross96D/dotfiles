@@ -100,7 +100,7 @@ function fzf_key_bindings
 
     commandline -f repaint
   end
-
+  
   function __fzfcmd
     test -n "$FZF_TMUX"; or set FZF_TMUX 0
     test -n "$FZF_TMUX_HEIGHT"; or set FZF_TMUX_HEIGHT 40%

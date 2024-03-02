@@ -16,6 +16,7 @@ alias c='code --no-proxy-server=true .'
 alias fixcolor='nvidia-settings --load-config-only'
 alias obsidian='/home/abelardo/apps/Obsidian-1.4.16.AppImage'
 alias conssh="kitten ssh abelardo@95.217.186.1"
+alias rm="rip"
 
 if type -q pyenv
     pyenv init - | source
@@ -31,3 +32,9 @@ function __on_pwd -v PWD
     # located at ./conf.d/task.dyncompl.fish
     __task_autocompletions
 end
+
+# set sdkman installation path for fish plugin
+set -g __sdkman_custom_dir "$HOME/.sdkman"
+
+# opam configuration
+source /home/abelardo/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true

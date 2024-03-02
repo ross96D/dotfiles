@@ -22,3 +22,8 @@ abbr -a gaca --position command "git add . && git commit --amend"
 #
 
 abbr -a fcd --position command fzf-cd-widget
+
+function __help_abbr
+    echo "--help | bat --plain --language=help"
+end
+abbr -a help --position anywhere --function __help_abbr --regex -h
