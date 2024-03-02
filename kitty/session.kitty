@@ -1,0 +1,14 @@
+layout tall
+
+launch fish
+
+new_tab 
+layout tall
+
+launch fish
+launch fish
+launch sh -c "sudo nethogs && exec fish"
+
+new_tab btop
+layout tall
+launch sh -c "btop && exec fish"
